@@ -52,6 +52,47 @@ combined_sim_DNN_data.csv contains the DNN and simulation data matched to their 
 
 # consolidated_data by column
 
-### subject_id subject id
-subject id
+### subject_id
+9 digit number assigned to an event by Zooniverse, ex 101504604
+
+### data.num_votes
+**User Data** the number of votes the "winning" category has
+
+### data.most_likely
+**User Data** the "winning" category that recieved the highest number of votes
+
+### data.agreement
+**User Data** the ratio of votes the "winning" category got to the total number of votes, ex 11/15 = 0.73
+
+### filename
+full filename that includes the run, event, and origidx numbers, run and event are also separate columns
+
+### truth_classification
+**Simulation Data** True event topology out of the following:
+
+unclassified = 0  
+throughgoing_track = 1  
+starting_track = 2  
+stopping_track = 3  
+skimming_track = 4  
+contained_track = 5  
+contained_em_hadr_cascade = 6  
+contained_hadron_cascade = 7  
+uncontained_cascade = 8  
+glashow_starting_track = 9  
+glashow_electron = 10  
+glashow_tau_double_bang = 11  
+glashow_tau_lollipop = 12  
+glashow_hadronic = 13  
+throughgoing_tau = 14  
+skimming_tau = 15  
+double_bang = 16  
+lollipop = 17  
+inverted_lollipop = 18  
+throughgoing_bundle = 19  
+stopping_bundle = 20  
+tau_to_mu = 21
+
+
+
 
