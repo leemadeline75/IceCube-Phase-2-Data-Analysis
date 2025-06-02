@@ -225,7 +225,7 @@ def consolidateData(user_data, dnn_sim_data, retirement_lim, outdir):
 #        ((result_consensus['qtot'] <= 250) & (result_consensus['data.agreement'] > 0.55))
 #    ]
     
-    result_consensus_filtered = result_consensus[result_consensus['data.agreement'] >= 0.55]
+ #   result_consensus_filtered = result_consensus[result_consensus['data.agreement'] >= 0.55]
 
     #result_consensus_qtot = result_consensus_filtered[   (result_consensus_filtered['qtot'] >= 0) & (result_consensus_filtered['qtot'] <= 300)]
 
@@ -258,7 +258,7 @@ def consolidateData(user_data, dnn_sim_data, retirement_lim, outdir):
 #    (result_consensus_filtered['qratio'] < 0.05) | (result_consensus_filtered['qratio'] > 0.95)
 #]   
     # Save the consolidated data to a CSV file
-    csv_name = os.path.join(outdir, 'consolidated_data_55.csv')
+    csv_name = os.path.join(outdir, 'consolidated_data.csv')
     result_consensus_filtered.to_csv(csv_name, index=False)
 
     return csv_name
