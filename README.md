@@ -8,11 +8,17 @@ Here is a collection of code for analysis of the second iteration of Name that N
 Reducing NTN data exports
 The relevant files are located in the iteration2 directory. The following code is to get from the raw NtN data export files name-that-neutrino-classifications, name-that-neutrino-workflows, and name-that-neutrino-subjects to a consolidated_data.csv file and confusion matrices
 
-#name-that-neutrino-classifications: classification level data (ex, graham classifed event 10289368 as a cascade at this time), includes user name, ip address, workflow, date, start time, end time, users choice (what they picked), and subject id
+name-that-neutrino-classifications
 
-#name-that-neutrino-workflows: information about the current and previous workflows, including primary language and retirement limit
+classification level data (ex, graham classifed event 10289368 as a cascade at this time), includes user name, ip address, workflow, date, start time, end time, users choice (what they picked), and subject id
 
-#name-that-neutrino-subjects: subject data, information about each event/video (ex 7840), can be used as definitive list of all subject ids
+name-that-neutrino-workflows
+
+information about the current and previous workflows, including primary language and retirement limit
+
+name-that-neutrino-subjects
+
+subject data, information about each event/video (ex 7840), can be used as definitive list of all subject ids
 
 get_retired.py
 The input for this files are the raw Ntn data exports, and the output is three new files, also named name-that-neutrino-classifications, name-that-neutrino-workflows, and name-that-neutrino-subjects that only includes classifications for the second iteration, and excludes classifications done above the specified retirement limit
