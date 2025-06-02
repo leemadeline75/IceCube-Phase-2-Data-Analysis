@@ -32,7 +32,7 @@ The input files are the output files of get_retired: name-that-neutrino-classifi
 
 The input files for phase2_data_analysis.py are user_consensus_data.csv (the users data) and combined_sim_DNN_data.csv (the DNN and simulation data). The consolidateData function takes in the information from both files, matches them based on subject id, and removes irrelevant columns that may have been carried over. Additionally, this is where any filters on qratio, qtot, or data.agreement (user confidence) can be done. This saves the desired info into a new file, consolidated_data
 
-The file consolidated_data is then used to make the confusion matrices and for further analysis
+The file consolidated_data is then used to make the confusion matrices and for further analysis. The phase2_data_analysis.py file also includes the code for several plots I made in my analysis of Qtotal
 
 # do_analysis.py
 This is a script that runs everything together. This is where you specify and input and output, and retirement limit. Line 73 specifies the completion of the above analyis, the remaining lines I used for further analysis.
