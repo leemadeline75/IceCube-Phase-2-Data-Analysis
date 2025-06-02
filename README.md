@@ -59,7 +59,7 @@ combined_sim_DNN_data.csv contains the DNN and simulation data matched to their 
 **User Data** the number of votes the "winning" category has
 
 ### data.most_likely
-**User Data** the "winning" category that recieved the highest number of votes
+**User Data** the "winning" category that recieved the highest number of votes, if listed as 0,1,2,3,4 mapping is under ntn_category
 
 ### data.agreement
 **User Data** the ratio of votes the "winning" category got to the total number of votes, ex 11/15 = 0.73
@@ -68,17 +68,17 @@ combined_sim_DNN_data.csv contains the DNN and simulation data matched to their 
 full filename that includes the run, event, and origidx numbers, run and event are also separate columns
 
 ### truth_classification
-**Simulation Data** True event topology out of the following:
+**Simulation Data** True event topology out of the following (+ mapping to the five NtN topologies):
 
 unclassified = 0  
-throughgoing_track = 1  
-starting_track = 2  
-stopping_track = 3  
-skimming_track = 4  
+throughgoing_track = 1                 ---> 2 ---> THROUGHGOINGTRACK
+starting_track = 2                     ---> 3 ---> STARTINGTRACK
+stopping_track = 3                     ---> 4 ---> STOPPINGTRACK
+skimming_track = 4                     ---> 0 ---> SKIMMING
 contained_track = 5  
-contained_em_hadr_cascade = 6  
-contained_hadron_cascade = 7  
-uncontained_cascade = 8  
+contained_em_hadr_cascade = 6          ---> 1 ---> CASCADE
+contained_hadron_cascade = 7           ---> 1 ---> CASCADE
+uncontained_cascade = 8                ---> 0 ---> SKIMMING
 glashow_starting_track = 9  
 glashow_electron = 10  
 glashow_tau_double_bang = 11  
@@ -89,9 +89,57 @@ skimming_tau = 15
 double_bang = 16  
 lollipop = 17  
 inverted_lollipop = 18  
-throughgoing_bundle = 19  
-stopping_bundle = 20  
+throughgoing_bundle = 19               ---> 2 ---> THROUGHGOINGTRACK
+stopping_bundle = 20                   ---> 4 ---> STOPPINGTRACK
 tau_to_mu = 21
+
+### pred_skim,	pred_cascade,	pred_tgtrack,	pred_starttrack,	pred_stoptrack
+**DNN Data** DNN confidence of whether that event belongs to the five topologies
+
+### energy,	zenith,	oneweight
+**Simulation Data** properties of the event given by the simulation
+
+### signal_charge
+**Simulation Data** value of charge deposited in the detector that came from signal (neutrino) from NuGen
+
+### bg_charge
+**Simulation Data** value of charge deposited in the detector that came from background (ex cosmic rays) from Corsika
+
+### qratio
+**Simulation Data** measured as signal_charge / (signal_charge + bg_charge), provides a measure of the signals contribution to the total charge of the event
+
+### qtot
+**Simulation Data** sum of signal_charge, bg_charge, and Qnoise(not in file), is the value of total charge deposited in the detector
+
+### max_score_val
+**DNN Data** value of highest DNN confidence out of the 5 topologies
+
+### idx_max_score
+**DNN Data** category that has the highest DNN confidence, the DNNs classification of that event, mapped by:
+
+pred_skim: SKIMMING
+pred_cascade: CASCADE
+pred_tgtrack: THROUGHGOINGTRACK
+pred_starttrack = STARTINGTRACK
+pred_stoptrack = STOPPINGTRACK
+
+### ntn_category
+**Simulation Data** truth label / "correct answer", which out of the 5 topologies the event actually should be classified as
+
+0 = SKIMMING
+1 = CASCADE
+2 = THROUGHGOINGTRACK
+3 = STARTINGTRACK
+4 = STOPPINGTRACK
+
+### user_accuracy
+1 if users classified event correctly, 0 if users classified incorrectly, determined if data.most_likely matches ntn_category
+
+### DNN_accuracy
+1 if the DNN classified event correctly, 0 is DNN classified incorrectly, determined if idx_max_score matches ntn_category
+
+
+
 
 
 
