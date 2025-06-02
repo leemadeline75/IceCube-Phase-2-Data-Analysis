@@ -2,7 +2,7 @@
 
 # Author: Madeline Lee
 
-Here is a collection of code for analysis of the Name that Neutrino Zooniverse data. This code has been mostly written by Elizabeth Warrick and Andrew Phillips. I have edited this code to be applied to the second iteration of this project. 
+Here is a collection of code for analysis of the second iteration of Name that Neutrino Zooniverse data. Some of this code was written by Elizabeth Warrick and Andrew Phillips. I have edited this code to be applied to the second iteration of this project. 
 
 
 Reducing NTN data exports
