@@ -3,7 +3,7 @@ import os
 import argparse
 import sys
 from reducer import Reducer
-from phase2_data_analysis_2 import consolidateData, makePlots
+from phase2_data_analysis import consolidateData, makePlots
 from get_retired import getRetired
 from energy_histo_plot import qtot2d_hist
 
