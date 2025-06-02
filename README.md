@@ -71,14 +71,14 @@ full filename that includes the run, event, and origidx numbers, run and event a
 **Simulation Data** True event topology out of the following (+ mapping to the five NtN topologies):
 
 unclassified = 0  
-throughgoing_track = 1                 ---> 2 ---> THROUGHGOINGTRACK
-starting_track = 2                     ---> 3 ---> STARTINGTRACK
-stopping_track = 3                     ---> 4 ---> STOPPINGTRACK
-skimming_track = 4                     ---> 0 ---> SKIMMING
-contained_track = 5  
-contained_em_hadr_cascade = 6          ---> 1 ---> CASCADE
-contained_hadron_cascade = 7           ---> 1 ---> CASCADE
-uncontained_cascade = 8                ---> 0 ---> SKIMMING
+throughgoing_track = 1                 ---> 2 ---> THROUGHGOINGTRACK  
+starting_track = 2                     ---> 3 ---> STARTINGTRACK  
+stopping_track = 3                     ---> 4 ---> STOPPINGTRACK  
+skimming_track = 4                     ---> 0 ---> SKIMMING  
+contained_track = 5    
+contained_em_hadr_cascade = 6          ---> 1 ---> CASCADE  
+contained_hadron_cascade = 7           ---> 1 ---> CASCADE  
+uncontained_cascade = 8                ---> 0 ---> SKIMMING  
 glashow_starting_track = 9  
 glashow_electron = 10  
 glashow_tau_double_bang = 11  
