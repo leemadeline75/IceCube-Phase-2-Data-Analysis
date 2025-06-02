@@ -48,3 +48,10 @@ For the second iteration, the DNN and simulation data was not added to the name-
 3. Match dnn/sim to user data based on run, event, and origidx value. The DNN/simulation data is only labeled by run number and event number. On Zooniverses end (the user data), each event has a run number, event number, and origidx number. Each combination of run, event, and origidx is entirely unique to that event, some events have the same run and event, making them impossible to match to corresponding DNN and simulation data. For this reason, I only included event with a unique run and event value, any events with the same run/event combo were excluded from further analysis, bringing the total number of events down from 7840 to 6385.
    
 combined_sim_DNN_data.csv contains the DNN and simulation data matched to their appropriate subject id, and is now used in phase2_data_analysis. This should only need to be done once!
+
+
+# consolidated_data by column
+
+### subject_id subject id
+subject id
+
