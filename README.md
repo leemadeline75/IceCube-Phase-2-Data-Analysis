@@ -70,7 +70,7 @@ full filename that includes the run, event, and origidx numbers, run and event a
 ### truth_classification
 **Simulation Data** True event topology out of the following (+ mapping to the five NtN topologies):
 
-'''unclassified = 0  
+<pre> '''textunclassified = 0  
 throughgoing_track = 1                 ---> 2 ---> THROUGHGOINGTRACK  
 starting_track = 2                     ---> 3 ---> STARTINGTRACK  
 stopping_track = 3                     ---> 4 ---> STOPPINGTRACK  
@@ -91,7 +91,7 @@ lollipop = 17
 inverted_lollipop = 18  
 throughgoing_bundle = 19               ---> 2 ---> THROUGHGOINGTRACK  
 stopping_bundle = 20                   ---> 4 ---> STOPPINGTRACK  
-tau_to_mu = 21  '''
+tau_to_mu = 21  ''' </pre>
 
 ### pred_skim,	pred_cascade,	pred_tgtrack,	pred_starttrack,	pred_stoptrack
 **DNN Data** DNN confidence of whether that event belongs to the five topologies
