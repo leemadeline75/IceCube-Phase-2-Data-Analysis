@@ -117,20 +117,20 @@ tau_to_mu = 21 </pre>
 ### idx_max_score
 **DNN Data** category that has the highest DNN confidence, the DNNs classification of that event, mapped by:
 
-pred_skim: SKIMMING
-pred_cascade: CASCADE
-pred_tgtrack: THROUGHGOINGTRACK
-pred_starttrack = STARTINGTRACK
-pred_stoptrack = STOPPINGTRACK
+pred_skim: SKIMMING  
+pred_cascade: CASCADE  
+pred_tgtrack: THROUGHGOINGTRACK  
+pred_starttrack = STARTINGTRACK  
+pred_stoptrack = STOPPINGTRACK  
 
 ### ntn_category
 **Simulation Data** truth label / "correct answer", which out of the 5 topologies the event actually should be classified as
 
-0 = SKIMMING
-1 = CASCADE
-2 = THROUGHGOINGTRACK
-3 = STARTINGTRACK
-4 = STOPPINGTRACK
+0 = SKIMMING  
+1 = CASCADE  
+2 = THROUGHGOINGTRACK  
+3 = STARTINGTRACK  
+4 = STOPPINGTRACK  
 
 ### user_accuracy
 1 if users classified event correctly, 0 if users classified incorrectly, determined if data.most_likely matches ntn_category
